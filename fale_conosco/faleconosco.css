@@ -215,3 +215,14 @@ textarea {
 
     margin-bottom:5px;
 }
+
+footer {
+  padding: 18px;
+  text-align: center;
+  background-color: var(--fundo-color);
+}
+
+footer p {
+  margin: 0;
+  color: var(--text-header);
+}
