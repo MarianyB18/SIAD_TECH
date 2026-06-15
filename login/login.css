@@ -1,4 +1,6 @@
   :root {
+            --header-color:#E1EDE4;
+             --text-header:#20633A;
             --card-color:      #217836;
             --fundo-color:     #20633A;
             --voltar-color:    #D9D9D9;
@@ -16,15 +18,14 @@
         }
 
         body {
-            background-color: var(--fundo-color);
+            background-color: #20633AB2;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: sans-serif;
         }
-
-       
+        
         .container {
             position: relative;
             display: flex;
@@ -32,8 +33,10 @@
             align-items: center;
             gap: 14px;                  
             width: 550px;
-            background-color: var(--card-color);
-            border-radius: 8px;
+            background: linear-gradient(135deg, #1c6b38 0%, #217836 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
             padding: 50px 30px 30px;  
         }
 

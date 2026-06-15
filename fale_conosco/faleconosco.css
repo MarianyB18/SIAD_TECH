@@ -16,7 +16,7 @@
 }
 
 body{
-    background-color: var(--text-card);
+    background-color: var(--fundo-color);
     min-height: 100vh;
     overflow: hidden;
     position: relative;
@@ -127,37 +127,53 @@ main{
 }
 
 .card{
-    background: var(--card-color);
-    border-radius: 12px;
+    background: linear-gradient(135deg, #1c6b38 0%, #1a5e30 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
     padding: 32px 28px;
-    width: 320px;
+    width: 480px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-
+    margin-top: 30px;
+ 
 }
 
 .card p{
-     
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 200;
     color: var(--text-card);
     margin-bottom: 18px;
     line-height: 1.5;
 }
 
-.card .barras input{
+.card .barras {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card .barras input {
     display: block;
     width: 100%;
     background-color: var(--text-card);
     border: none;
     border-radius: 5px;
-    padding: 10px 13px;
+    padding: 10px 30px;
     font-size: 0.86rem;
     color: var(--text-header);
-    margin-bottom: 9px;
     outline: none;
   
+}
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 0.86rem;
+    outline: none;
+    min-height: 180px;
+    resize: vertical;
 }
 
 .card .btn-contato{
@@ -180,7 +196,33 @@ main{
 }
 
 .btn-contato:hover{
-    background :#c80d5a 
+    background:#c80d5a;
    
     
+}
+
+#erroNome,
+#erroEmail,
+#erroTelefone,
+#erroMensagem{
+
+    color:rgb(199, 3, 3);
+   
+
+    font-size:14px;
+
+    margin-top:-10px;
+
+    margin-bottom:5px;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  background-color: var(--fundo-color);
+}
+
+footer p {
+  margin: 0;
+  color: var(--text-header);
 }
