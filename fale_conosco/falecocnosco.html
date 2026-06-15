@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - SIAD Tech</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+   <link rel="stylesheet" href="./faleconosco.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <a href="#" class="logo" >
+            <img src="../images/logosemfundo.png" alt="logo da SIAD Tech">
+        </a>
+        
+        <ul class="opcoes">
+            <li><a href="#">Doações</a></li>
+            <li><a href="#">ONGs</a></li>
+           <li><a href="#">Transporte</a></li>
+           <li><a href="#"><span>Fale Conosco</span></a></li>
+        </ul>
+            <a href="#" class="button-header">Entrar</a>
+       </nav>
+       
+    </header>
+    <main>
+         <div class="container">
+       <div  class="logo-main"><img src="../images/logosemfundo.png" alt="imagem da logo da SIAD Tech"></div>
+        <div class="card">
+            <p>Preencha seus dados e nossa equipe entrará em contato para responder quaisquer dúvidas sobre a SIAD Tech</p>
+           <div class="barras">
+    <input type="text" id="nome" placeholder="Nome">
+    <p id="erroNome"></p>
+
+    <input type="email" id="email" placeholder="e-mail">
+    <p id="erroEmail"></p>
+
+    <input type="tel" id="telefone" placeholder="Whatsapp com DDD">
+    <p id="erroTelefone"></p>
+
+    <textarea
+        id="mensagem"
+        placeholder="Digite sua mensagem"
+        maxlength="500"
+    ></textarea>
+    <p id="erroMensagem"></p>
+</div>
+
+<a href="#" id="btnContato" class="btn-contato">
+    Entrar em Contato
+    <i class="fa-solid fa-square-arrow-up-right"></i>
+</a>
+        </div>
+        </div>
+    </main>
+     <script src="./faleconosco.js"></script>
+</body>
+</html>
