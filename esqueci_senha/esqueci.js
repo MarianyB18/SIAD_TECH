@@ -1,3 +1,4 @@
+
 const form = document.getElementById("forgotForm");
 const message = document.getElementById("message");
 
