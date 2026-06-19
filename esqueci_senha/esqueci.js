@@ -16,5 +16,15 @@ function togglePasswordVisibility(inputId, icon) {
 document.getElementById('resetPasswordForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o recarregamento da página por padrão
 
-    form.reset();
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Validação básica de correspondência de senha
+    if (newPassword !== confirmPassword) {
+        alert("As senhas não coincidem. Por favor, tente novamente.");
+    } else {
+        // Se as senhas coincidirem, você pode adicionar sua lógica de back-end aqui
+        alert("Senha redefinida com sucesso!");
+        // Em um cenário real, você faria uma requisição para o servidor aqui
+    }
 });
