@@ -1,29 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Uma fonte sans-serif limpa */
+}
+
 body {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    font-family: 'Segoe UI', sans-serif;
+    background-color: #5d8e7c; /* O fundo verde-oliva da imagem */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #007bff; /* A borda azul externa visível na imagem */
 }
 
-.card {
-    backdrop-filter: blur(10px);
+/* --- Container Principal --- */
+.main-container {
+    width: 100%;
+    max-width: 450px; /* Largura máxima do card */
+    padding: 20px;
 }
 
-.form-control {
-    border-radius: 10px;
-    padding: 12px;
+/* --- O Card de Senha --- */
+.password-card {
+    background-color: #0d633c; /* Verde mais escuro do card */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidade */
 }
 
-.btn-primary {
-    border-radius: 10px;
-    padding: 12px;
-    font-weight: 600;
+/* --- Cabeçalho do Card --- */
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
 }
 
-.success {
-    color: #198754;
-    font-weight: 500;
+.back-button {
+    background-color: #d1e7dd; /* Cor de fundo do botão "Voltar" */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    margin-bottom: 20px;
 }
 
-.error {
-    color: #dc3545;
-    font-weight: 500;
+h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Grupos de Entrada de Texto --- */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #28a745; /* Cor verde para o ícone de cadeado */
+}
+
+input[type="password"], 
+input[type="text"] {
+    width: 100%;
+    padding: 15px 15px 15px 45px; /* Mais preenchimento à esquerda para o ícone */
+    border-radius: 8px;
+    border: none;
+    background-color: #f1f1f1; /* Cor de fundo cinza clara dos inputs */
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+/* Ícone de alternância de visibilidade da senha (olho) */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+}
+
+/* --- Nota de Campos Obrigatórios --- */
+.required-note {
+    color: #b1d7bd;
+    font-size: 12px;
+    margin-bottom: 25px;
+    margin-top: -5px;
+}
+
+/* --- Botão de Envio --- */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #e91e63; /* O rosa vibrante do botão "Alterar" */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaço entre o texto e o ícone */
 }

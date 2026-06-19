@@ -1,21 +1,30 @@
-const form = document.getElementById("forgotForm");
-const message = document.getElementById("message");
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const email = document.getElementById("email").value.trim();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-        message.innerHTML =
-            '<span class="error">Digite um e-mail válido.</span>';
-        return;
+function togglePasswordVisibility(inputId, icon) {
+    const passwordInput = document.getElementById(inputId);
+    
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    } else {
+        passwordInput.type = "password";
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
     }
+}
 
-    message.innerHTML =
-        '<span class="success">Link de recuperação enviado com sucesso!</span>';
+// Manipulação do envio do formulário
+document.getElementById('resetPasswordForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o recarregamento da página por padrão
 
-    form.reset();
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Validação básica de correspondência de senha
+    if (newPassword !== confirmPassword) {
+        alert("As senhas não coincidem. Por favor, tente novamente.");
+    } else {
+        // Se as senhas coincidirem, você pode adicionar sua lógica de back-end aqui
+        alert("Senha redefinida com sucesso!");
+        // Em um cenário real, você faria uma requisição para o servidor aqui
+    }
 });
